@@ -7,7 +7,9 @@
   async function main() {
 
     //connecting to database
-    await mongoose.connect('mongodb://localhost:27017/habit_tracker_development');
+    // await mongoose.connect('mongodb://localhost:27017/habit_tracker_development');
+    await mongoose.connect('mongodb+srv://umarsid007:N4rzhlRwVSLuw9KW@cluster0.3olwqe7.mongodb.net/?retryWrites=true&w=majority');
+    
     
     // use `await mongoose.connect('mongodb://user:password@localhost:27017/test');` if your database has auth enabled
   }
