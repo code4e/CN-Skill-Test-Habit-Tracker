@@ -1,0 +1,75 @@
+.habit-list-cont{
+    margin: 10px;
+    display:flex;
+    justify-content: center;
+    margin: 10px auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.week-cont{
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.day-cont{
+    width: 12.5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bi-pencil-square{
+    color: #ec729c;
+}
+.bi-trash-fill{
+    color: #dc2f2f;
+}
+
+.day-cont i{
+    transform: scale(1.4);
+    margin: 8px;
+    cursor: pointer;
+    width: 20%;
+}
+
+.day-cont i:hover{
+    color:cornflowerblue;
+}
+
+.delete-icon-cont i:hover{
+    color:orangered;
+}
+
+.nav-btn-cont{
+    display: flex;
+    margin: 5px;
+    align-items: center;
+}
+
+.carousel-control-prev, .carousel-control-next{
+    width: 5%;
+    /* margin: 10px; */
+}
+
+.delete-icon-cont{
+    display: flex;
+    justify-content: start;
+    width: 50%;
+}
+
+.delete-icon-cont i{
+    transform: scale(1.4);
+    margin: 8px;
+    cursor: pointer;
+}
+
+.edit-modal-btn{
+    display: none;
+}
+
+
+

@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/css/daily_view.css">
+
+<div class="habit-list-cont">
+    <% for( let habit of locals.habits ) { %>
+        <div class="card w-75 m-1" id="card-<%= habit._id %>">
+            <div class="card-body" habit-title="<%= habit.title %>" habit-description="<%= habit.description %>" habit-start="<%= habit.start %>" habit-end="<%= habit.end %>">
+                <h5 class="card-title">
+                    <%= habit.title %>
+                </h5>
+                <h6 class="card-subtitle mb-2 text-muted start-date-cont">
+                    <%= new Date(habit.start).toLocaleString('en-us', { weekday: "short" ,
+                    month: "short" , day: "numeric" }) %>
+                </h6>
+                <p class="card-text"><%= habit.description %></p>
+                <div class="delete-icon-cont">
+                    <i class="bi bi-pencil-square" id="edit-<%= habit._id %>"></i>
+                    <i class="bi bi-trash-fill" id="delete-<%= habit._id %>"></i>
+                </div>
+            </div>
+        </div>
+        <% } %>
+
+</div>
+</div>
+
+<script src="/js/app_daily.js"></script>

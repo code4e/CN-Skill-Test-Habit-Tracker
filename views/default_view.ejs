@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="/css/default_view.css">
+
+<div class="habit-list-cont">
+  <% for( let i=0 ; i < locals.habits.length ; i++ ) { %>
+    <div class="card w-75 m-1" id="card-<%=locals.habits[i]._id%>">
+      <div class="card-body">
+        <h5 class="card-title"><%= locals.habits[i].title %></h5>
+        <div id=<%=`carousel-${locals.habits[i]._id}` %> class="carousel carousel-dark slide" data-bs-interval="false"
+          data-bs-ride="" data-bs-wrap="false">
+          <div class="carousel-inner">
+            <% for( let page=1 ; page <=Math.ceil(locals.habits[i].dates.length / 7) ; page++) { %>
+              <div class="carousel-item <%= page == 1 ? " active" : "" %>">
+                <div class="week-cont">
+                  <% for( let d=(7 * (page - 1)) ; d <=((7 * page) - 1) ; d++ ) { %>
+                    <% if (d < locals.habits[i].dates.length) { %>
+                      <div class="day-cont <%=locals.habits[i]._id%>" id="day-<%=locals.habits[i].dates[d]._id%>">
+                        <span>
+                          <%= new Date(locals.habits[i].dates[d].date).toLocaleString('en-us', { weekday: "short" ,
+                             month: "short" , day: "numeric" , }) %>
+                        </span>
+                        <i class="day-ico bi bi-<%= (locals.habits[i].dates[d].status == "None" ? "" : (locals.habits[i].dates[d].status == "Done" ? "check-" : "x-")) %>circle-fill"></i>
+                      </div>
+                    <% } %>
+                  <% } %>
+                </div>
+              </div>
+              <% } %>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target=<%=`#carousel-${locals.habits[i]._id}`%>
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target=<%=`#carousel-${locals.habits[i]._id}`%>
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="delete-icon-cont">
+          <a href="#" id="streak-<%= locals.habits[i]._id %>" class="btn btn-primary get-best-streak-btn" data-bs-trigger="hover focus" data-toggle="popover" title="Click on the button to get your best streak" data-content="Some content inside the popover">Get Best Streak</a>
+          <!-- <span>2 / 14</span> -->
+          <i class="bi bi-trash-fill" id="delete-<%= locals.habits[i]._id %>"></i>
+        </div>
+
+      </div>
+    </div>
+    <% } %>
+</div>
+
+
+<script>
+  $(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+    $('[data-toggle="popover"]').mouseout(e => $('[data-toggle="popover"]').popover('hide'));
+  });
+</script>
+
+
+
+
+<script src="/js/app.js"></script>

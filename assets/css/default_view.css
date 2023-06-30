@@ -1,0 +1,86 @@
+.habit-list-cont {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.week-cont {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.day-cont {
+    width: 12.5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bi-circle-fill {
+    color: #79c2d0;
+}
+
+.bi-check-circle-fill {
+    color: #42b883;
+}
+
+.bi-x-circle-fill {
+    color: #e46161;
+}
+
+.day-cont i {
+    transform: scale(1.4);
+    margin: 8px;
+    cursor: pointer;
+    width: 20%;
+}
+
+.day-cont i:hover {
+    color: #407088;
+}
+
+.bi-trash-fill{
+    color: #dc2f2f;
+}
+
+.delete-icon-cont i:hover {
+    color: orangered;
+}
+
+.delete-icon-cont span{
+    color: gray;
+}
+
+.nav-btn-cont {
+    display: flex;
+    margin: 5px;
+    align-items: center;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+    /* margin: 10px; */
+}
+
+.delete-icon-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-icon-cont i {
+    transform: scale(1.4);
+    margin: 8px;
+    cursor: pointer;
+}
+
+.edit-modal-btn {
+    display: none;
+}
