@@ -3,7 +3,7 @@ A habit tracker using nodejs and ejs# CN-Skill-Test-Habit-Tracker
 Installation: - 
 
 1-  After taking the clone of the repo, run npm i.\
-2- Run npm start to run the server.\
+2- Run npm start to run the server.
 
 Features: - 
 
@@ -13,4 +13,4 @@ Features: -
 4 - User can delete a particular habit\
 5 - User can click on the "Get best streak button" to get the best streak of continues "Done" habits in the range\
 6 - User can also change the view to show daily.\
-7 - On the show daily page, the user can edit the habit and delete as well.\
+7 - On the show daily page, the user can edit the habit and delete as well.
