@@ -2,7 +2,7 @@ A habit tracker using nodejs and ejs# CN-Skill-Test-Habit-Tracker
 
 Installation: - 
 
-1-  After taking the clone of the repo, run npm i.
+1-  After taking the clone of the repo, run npm i. \n
 2- Run npm start to run the server.
 
 Features: - 
